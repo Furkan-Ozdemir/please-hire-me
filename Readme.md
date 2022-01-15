@@ -8,13 +8,13 @@ This project compares countries covid19 vaccination numbers with Benford's Graph
 
 After cloning the repo run
 
-```http
+```npm
   npm install
 ```
 
 then
 
-```http
+```npm
   node server.js
 ```
 

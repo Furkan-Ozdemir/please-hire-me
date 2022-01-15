@@ -7,7 +7,11 @@ a frequency array
 */
 const getData = async () => {
   try {
-    const data = await fetch("http://localhost:3000/");
+    let country = "";
+    const params = new URLSearchParams(window.location.search);
+    const data = await fetch(
+      `http://localhost:3000/?country=${params.get("country")}`
+    );
     const dataJson = await data.json();
 
     new Chart(document.getElementById("bar-chart"), {

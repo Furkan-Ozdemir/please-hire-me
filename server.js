@@ -27,12 +27,14 @@ app.get("/canvas", (req, res) => {
 });
 
 app.get("/", async (req, res) => {
+  const country = req.query.country;
+
   try {
     const data = await axios.get(
       "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json"
     );
     data.data.forEach((countryItem) => {
-      if (countryItem.country === "Turkey") {
+      if (countryItem.country === `${country}`) {
         countryItem.data.forEach((vaccinationInfo) => {
           if (vaccinationInfo.total_vaccinations !== undefined) {
             //if not undefined because some of them were

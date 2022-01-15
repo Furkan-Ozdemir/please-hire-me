@@ -1,19 +1,35 @@
-## Installation
+# Benford's law on covid19 vaccine numbers
 
-Use the package manager [npm] to install foobar.
-
-```bash
-npm install
-```
+This project compares countries covid19 vaccination numbers with Benford's Graph to see if the vaccine data is true or not
 
 ## Usage
 
+####
+
+After cloning the repo run
+
+```http
+  npm install
 ```
-node server.js
+
+then
+
+```http
+  node server.js
 ```
 
-## After running
+To get a country's vaccine graph
 
-go to http://localhost:3000/canvas and wait around 3 seconds to load
+go to
 
-https://github.com/Furkan-Ozdemir/please-hire-me
+```
+http://localhost:3000/canvas?country={insertCountryName}
+
+```
+
+Example Usage
+
+```
+http://localhost:3000/canvas?country=Switzerland
+http://localhost:3000/canvas?country=Turkey
+```

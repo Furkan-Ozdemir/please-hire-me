@@ -20,7 +20,7 @@ const getData = async () => {
         labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
         datasets: [
           {
-            label: "Turkish Vax Rate %",
+            label: `${params.get("country")} Vax Rate %`,
             backgroundColor: [
               "#3cba9f",
               "#3cba9f",
@@ -41,10 +41,6 @@ const getData = async () => {
       options: {
         responsive: false,
         legend: { display: false },
-        title: {
-          display: false,
-          text: "Predicted world population (millions) in 2050",
-        },
       },
     });
     new Chart(document.getElementById("bar-chart2"), {
@@ -74,10 +70,6 @@ const getData = async () => {
       options: {
         responsive: false,
         legend: { display: false },
-        title: {
-          display: false,
-          text: "Predicted world population (millions) in 2050",
-        },
       },
     });
   } catch (error) {
